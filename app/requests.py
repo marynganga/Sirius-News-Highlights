@@ -33,7 +33,7 @@ def get_sources(category):
 
 	return sources_results
 
-def process_results(sources_results):
+def process_sources(sources_results):
 	'''
     Function  that processes the sources result and transform them to a list of Objects
 
@@ -73,3 +73,26 @@ def get_articles(source):
 
 	return articles_results
 
+def process_articles(articles_results):
+	'''
+    Function  that processes the articles result and transform them to a list of Objects
+
+    Args:
+        articles_results: A list of dictionaries that contain articles details
+
+    Returns :
+        articles_list: A list of articles objects
+    '''
+    articles_list = []
+    for article_item in articles_results:
+    	author = article_item.get('author')
+    	title = article_item.get('title')
+    	description = article_item.get('description')
+    	url = article_item.get('url')
+    	image = article_item.get('urlToImage')
+    	date = article_item.get('publishedAt')
+
+    	article_object = Article(author,title,description,url,image,date)
+    	articles_list.append(article_object)
+
+    return articles_list
