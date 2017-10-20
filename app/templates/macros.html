@@ -8,3 +8,22 @@
 		</div>
 	{% endfor %}
 {% endmacro %}
+
+{% macro displayArticlesList(articles_list) %}
+	{% for article in articles_list %}
+		<div style="margin: 20px;border: 2px solid #ddd;background-color: #FEFBF7;border-radius: 4px;box-shadow: 0 0 25px #eee">
+				<div class="row" style="padding: 5px">
+					<div class="col-md-3" style="text-align: center">
+						<img src="{{article.image}}" alt="{{article.title}}" width="250px" height="150px">
+					</div>
+					<div class="col-md-9">
+						<a target="_blank" href="{{article.url}}">
+							<h4>{{article.title}}</h4>
+						</a>
+						<p>{{article.author}}-{{article.publishedAt}}</p>
+						<p>{{article.description | truncate(150)}}</p>
+					</div>
+				</div>
+		</div>
+	{% endfor %}
+{% endmacro %}
