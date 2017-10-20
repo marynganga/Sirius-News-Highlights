@@ -19,14 +19,14 @@ def index():
 
 	return render_template('index.html', title=title,business=business_sources,general=general_sources,entertainment=entertainment_sources,sport=sport_sources,technology=technology_sources)
 
-@main.route('source/<str:id>')
+@main.route('/source/<id>')
 def source(id):
 	'''
 	View Function that returns the source page and its data
 	'''
 	# Getting articles according to source chosen
 	articles = get_articles(id)
+	source_id = id.upper()
+	title = f'{source_id} - Top Articles'
 
-	title = f'{id} - Top Articles'
-
-	return render_template('source.html',title=title, articles=articles)
+	return render_template('source.html',title=title,id=source_id, articles=articles)
