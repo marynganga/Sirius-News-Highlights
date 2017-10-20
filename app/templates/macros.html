@@ -1,11 +1,13 @@
 <!-- DISPLAYING SOURCES MACRO -->
 {% macro displaySourcesList(sources_list) %}
 	{% for source in sources_list %}
-		<div class="col-md-2" style="margin: 20px;border: 2px solid #ddd;background-color: lightgrey">	
-				<a href="/source/{{source.id}}">
-					<p class="text-center">{{source.name}}</p>
-				</a>
+	<a href="/source/{{source.id}}">
+		<div class="col-md-2" class="source" style="color:black;margin: 20px;border: 2px solid #ddd;background-image: url('static/images/background1.jpg'); background-size: cover; background-color: lightgrey;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 5px #ddd">	
+				
+					<p class="text-center" style="color:black;font-style: bold;font-size: 18px">{{source.name}}</p>
+			
 		</div>
+	</a>
 	{% endfor %}
 {% endmacro %}
 

@@ -3,25 +3,18 @@
 <!-- Styles Block -->
 {% block styles %}
     {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 {% endblock %}
 <!-- Content Block -->
 {% block content %}
 <div class="navbar navbar-light" role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-        </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav align-center">
+            <ul class="nav navbar-nav" style="padding-left:30%">
                 <li><a href="#general">General</a></li>
                 <li><a href="#business">Business</a></li>
-                <li><a href="#sport">Sport</a></li>
+                <li><a href="#sport">Sports</a></li>
                 <li><a href="#entertainment">Entertainment</a></li>
                 <li><a href="#technology">Technology</a></li>
             </ul>
@@ -34,8 +27,9 @@
         <p>For the latest news highlights from various sources</p>  
     </div>
     <!-- General Sources section  -->
+    <hr />
     <div class="source_section">
-        <h3 id="general" class="source_name">General</h3>
+        <h3 id="general" class="source_section_name">General News</h3>
         <ul>
             <div class="row">
         	   {{ macro.displaySourcesList(general) }}
@@ -43,8 +37,9 @@
         </ul>
     </div>
  <!-- Business Sources section  -->
+    <hr />
     <div class="source_section">
-        <h3 id="business" class="source_name">Business</h3>
+        <h3 id="business" class="source_section_name">Business News</h3>
         <ul>
             <div class="row">
                {{ macro.displaySourcesList(business) }}
@@ -52,8 +47,9 @@
         </ul>
     </div>
     <!-- Sport Sources section  -->
+    <hr />
     <div class="source_section">
-        <h3 id="sport" class="source_name">Sport</h3>
+        <h3 id="sport" class="source_section_name">Sports News</h3>
         <ul>
             <div class="row">
                {{ macro.displaySourcesList(sport) }}
@@ -61,8 +57,9 @@
         </ul>
     </div>
     <!-- Entertainment Sources section  -->
+    <hr />
     <div class="source_section">
-        <h3 id="entertainment" class="source_name">Entertainment</h3>
+        <h3 id="entertainment" class="source_section_name">Entertainment News</h3>
         <ul>
             <div class="row">
                {{ macro.displaySourcesList(entertainment) }}
@@ -70,8 +67,9 @@
         </ul>
     </div>
     <!-- Technology Sources section  -->
+    <hr />
     <div class="source_section">
-        <h3 id="technology" class="source_name">Technology</h3>
+        <h3 id="technology" class="source_section_name">Technology News</h3>
         <ul>
             <div class="row">
                {{ macro.displaySourcesList(technology) }}
