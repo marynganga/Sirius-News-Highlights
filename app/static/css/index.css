@@ -1,0 +1,25 @@
+.navbar-light{
+	margin-top: 0px;
+	text-align: center;
+	background-color: lightgrey
+}
+.source_section{
+	display: block;
+}
+.page_name{
+	text-align: center;
+}
+.source_name{
+	text-align: center;
+}
+footer{
+	margin-top: 100px;
+	background-color: lightgrey;
+	width:100%;
+	margin-bottom: 0px;
+	bottom: 0%
+}
+footer h4{
+	text-align: center;
+	padding: 50px
+}
