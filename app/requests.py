@@ -29,7 +29,7 @@ def get_sources(category):
 
 		if get_sources_response['sources']:
 			sources_results_list = get_sources_response['sources']
-			sourcesq_results = process_results(movie_results_list)
+			sources_results = process_results(sources_results_list)
 
 	return sources_results
 
@@ -56,5 +56,20 @@ def process_results(sources_results):
 
     return sources_list
 
+def get_articles(source):
+	'''
+	Function that gets the json response to our url request
+	'''
+	get_articles_url = articles_base_url.format(source,api_Key)
 
+	with urllib.request.urlopen(get_articles_url,data=None) as url:
+		get_articles_data = url.read()
+		get_articles_response = json.loads(get_articles_data)
+		articles_results = None
+
+		if get_articles_response['articles']:
+			articles_results_list = get_articles_response['articles']
+			articles_results = process_results(articles_results_list)
+
+	return articles_results
 
