@@ -5,6 +5,8 @@ class Source:
 	def __init__(self,id,name,description,url,category):
 		'''
 		Function to initialize Source Objects
+		It defines the properties each Source object will hold.
+	
 		Args: 
 			1. id
 			2. name
