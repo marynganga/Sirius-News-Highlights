@@ -5,6 +5,7 @@
 	background-color: lightgrey
 }
 
+
 /*SOURCE STYLES*/
 .source_section{
 	display: block;
@@ -15,9 +16,7 @@
 .page_name h1{
 	font-family: 'Black Ops One', cursive;
 }
-.page_name p{
-	font-weight: bold;
-}
+
 .source_section_name{
 	text-align: center;
 	font-family: 'Black Ops One', cursive;
