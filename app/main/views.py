@@ -18,3 +18,15 @@ def index():
 	title = 'Home - Find the latest news highlights'
 
 	return render_template('index.html', title=title,business=business_sources,general=general_sources,entertainment=entertainment_sources,sport=sport_sources,technology=technology_sources)
+
+@main.route('source/<str:id>')
+def source(id):
+	'''
+	View Function that returns the source page and its data
+	'''
+	# Getting articles according to source chosen
+	articles = get_articles(id)
+
+	title = f'{id} - Top Articles'
+
+	return render_template('source.html',title=title, articles=articles)
