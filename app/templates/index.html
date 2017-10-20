@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Content Block -->
+{% block content %}
+<main class="container-fluid">
+       
+	<!-- General Sources section  -->
+    <div style="display: block">
+        <h3>General Sources</h3>
+        <ul>
+            <div class="row">
+        	   {{ macro.displaySourcesList(general) }}
+            </div>
+        </ul>
+    </div>
+ <!-- Business Sources section  -->
+    <div style="display: block">
+        <h3>Business Sources</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(business) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Sport Sources section  -->
+    <div style="display: block">
+        <h3>Sport Sources</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(sport) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Entertainment Sources section  -->
+    <div style="display: block">
+        <h3>Entertainment Sources</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(entertainment) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Technology Sources section  -->
+    <div style="display: block">
+        <h3>Technology Sources</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(technology) }}
+            </div>
+        </ul>
+    </div>
+ 
+</main>
+{% endblock %}
