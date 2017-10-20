@@ -2,9 +2,9 @@
 {% macro displaySourcesList(sources_list) %}
 	{% for source in sources_list %}
 	<a href="/source/{{source.id}}">
-		<div class="col-md-2" class="source" style="color:black;margin: 20px;border: 2px solid #ddd;background-image: url('static/images/background1.jpg'); background-size: cover; background-color: lightgrey;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 5px #ddd">	
+		<div class="col-md-2" class="source" style="margin: 20px;border: 2px solid #ccc;background-image: url('static/images/background1.jpg'); background-size: cover; background-color: lightgrey;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 25px grey">	
 				
-					<p class="text-center" style="color:black;font-style: bold;font-size: 18px">{{source.name}}</p>
+					<p class="text-center" style="font-style: bold;font-size: 18px;background-color: rgba(0,0,0,1);">{{source.name}}</p>
 			
 		</div>
 	</a>
@@ -13,7 +13,7 @@
 
 {% macro displayArticlesList(articles_list) %}
 	{% for article in articles_list %}
-		<div style="margin: 20px;border: 2px solid #ddd;background-color: #FEFBF7;border-radius: 4px;box-shadow: 0 0 25px #eee">
+		<div style="margin: 20px;border: 2px solid #ccc;background-color: #FEFBF7;border-radius: 4px;box-shadow: 0 0 25px #ddd">
 				<div class="row" style="padding: 5px">
 					<div class="col-md-3" style="text-align: center">
 						<img src="{{article.image}}" alt="{{article.title}}" width="250px" height="150px">
