@@ -11,6 +11,7 @@ def create_app(config_name):
 
 	# set up configurations
 	app.config.from_object(config_options[config_name])
+	app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 	# initialize flask extensions
 	bootstrap.init_app(app)
