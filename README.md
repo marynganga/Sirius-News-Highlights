@@ -71,8 +71,7 @@ As a user I would like to:
 ## Testing the Application
 * To run the tests for the class files:
 
-        $ python3.6 tests/test_news_article.py
-        $ python3.6 tests/test_news_source.py
+        $ python3.6 manage.py tests
         
 ## Technologies Used
 * Python3.6
